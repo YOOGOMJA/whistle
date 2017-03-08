@@ -1,0 +1,40 @@
+doctype html
+html
+	head
+		title= title
+		link(rel="stylesheet", href='/bower/bootstrap/dist/css/bootstrap.css')
+		link(rel="stylesheet", href="/stylesheets/layout/footer.css")
+		link(rel="stylesheet", href='/stylesheets/layout/layout.css')
+		script(type='text/javascript' , src='/bower/jquery/dist/jquery.js')
+		script(type='text/javascript' , src='/bower/bootstrap/dist/js/bootstrap.js')
+		script(type='text/javascript' , src='/bower/angular/angular.js')
+		script(type='text/javascript' , src='/javascripts/angular/module.js')
+		block head
+	body(ng-app='whistleApp')
+		div(class='body-content container' , role='main')
+			block content
+		
+	footer(class='footer')
+		div(class='container')
+			p(class="text-muted") Icons made by 
+				a(href="http://www.flaticon.com/authors/elegant-themes" title="Elegant Themes") Elegant Themes
+				| , 
+				a(href="http://www.flaticon.com/authors/yannick" title="Yannick") Yannick
+				| , 
+				a(href="http://www.freepik.com" title="Freepik") Freepik
+				| ,
+				a(href="http://www.flaticon.com/authors/simpleicon" title="SimpleIcon") SimpleIcon
+				| , 
+				a(href="http://www.flaticon.com/authors/google" title="Google") Google
+				| ,
+				br
+				a(href="http://www.flaticon.com/authors/bogdan-rosu" title="Bogdan Rosu") Bogdan Rosu
+				| , 
+				a(href="http://www.flaticon.com/authors/egor-rumyantsev" title="Egor Rumyantsev") Egor Rumyantsev
+				|  from 
+				a(href="http://www.flaticon.com" title="Flaticon") www.flaticon.com
+				|  is licensed by 
+				a(href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0") CC BY 3.0
+			p(class='text-muted')
+				| All Right Reserved By 
+				a(href="http://yoogomja.tistory.com") GOMJA

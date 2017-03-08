@@ -1,0 +1,47 @@
+doctype html
+html
+	head
+		title= 'Whistle'
+		link(rel="stylesheet", href='/bower/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet', href='http://getbootstrap.com/examples/cover/cover.css')
+		link(rel="stylesheet" , href='/stylesheets/index.css')
+		script(type='text/javascript' , src='/bower/jquery/dist/jquery.js')
+		script(type='text/javascript' , src='/bower/bootstrap/dist/js/bootstrap.js')
+		script(type='text/javascript' , src='/bower/angular/angular.js')
+		script(type='text/javascript' , src='/javascripts/index.js')
+	body
+		div(class='site-wrapper')
+			div(class='site-wrapper-cover')
+			div(class='site-wrapper-inner' , style='position : relative')
+				div(class='cover-container')
+					div(class='masthead clearfix')
+						div(class='inner')
+							h3(class='masthead-brand') 
+								img(src='/images/logo.svg' ,style='width : 50px; height:50px;')
+								| &nbsp; Whistle
+							div(class='masthead-buttons')
+								a(href="/users/signin") 
+									span(class="btn btn-clear-default" , style='margin-right : 10px;') Signin
+								a(href="/user/signup") 
+									span(class="btn btn-clear-success" ) Create Your Account
+					div(id='div_intro' , class='inner cover')
+						h1(class='cover-heading') 당신의 코트로 찾아가세요
+						p(class='lead') 그리고 경기 결과를 분석하고 팀원 모두에게 공유하세요 
+							br
+							| 모든 경기결과는 전국의 모든 라이벌에게 공유할 수 있습니다
+						p(class='lead')
+							input(type='text' , class='form-control join' , placeholder='팀ID 혹은 경기코드를 입력하세요')
+							span(class='btn btn-lg btn-success') Join
+						p 아직 계정을 갖고있지 않으신가요?
+							span(class='btn btn-sm btn-warning' , style='margin-left: 5px;') Create Your Account
+						p 이미 계정을 갖고있으신가요?
+							span(class='btn btn-sm btn-info' , style='margin-left: 5px;') Sign in
+					div(class='mastfoot')
+						div(class='inner')
+							p 	all right reserved by &nbsp;
+								a(href='http://yoogomja.tistory.com') GOMJA
+								br
+								| Cover template for
+								a(href='http://getbootstrap.com') &nbsp;Bootstrap 
+								| , by
+								a(href='https://twitter.com/mdo') &nbsp;@mdo				

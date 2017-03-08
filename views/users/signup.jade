@@ -1,0 +1,44 @@
+extends ../layout_empty.jade
+
+block head
+	link(rel='stylesheet' , href='/stylesheets/users/sign.css')
+
+block content
+	div(class='container')
+		form(class='form-signin' , action='/users/signup' , method="post")
+			h2(class='form-signin-heading') 
+				img(class='icon-logo' , src='/images/logo_Color.svg')
+				p(class='logo-desc') Whistle
+				
+			a(href="#facebook" , class='btn btn-lg btn-facebook') 
+				img(class='icon-facebook', src='/images/MyIcons_SVG/svg/facebook29.svg')
+				| Signup with Facebook
+			a(href="#login" , class='btn btn-lg btn-twitter') 
+				img(class='icon-twitter', src='/images/MyIcons_SVG/svg/twitter1.svg')
+				| Signup with Twitter
+			hr
+			
+			if(message.length > 0)
+				div(class='alert alert-danger')
+					=message
+			
+			
+			label(for='inputEmail' , class='sr-only') Email Address
+			input(type='email' , name='inputEmail' , placeholder='Email을 입력해주세요' ,required , autofocus ,class='form-control')
+			label(for='inputPassword' , class='sr-only') Password
+			input(type='password' , name='inputPassword' , placeholder='Password를 입력해주세요' ,required ,class='form-control form-middle')
+			label(for='inputPassword' , class='sr-only') Password Validation
+			input(type='password' ,name='inputPassword_valid' , placeholder='Password를 한번 더 입력해주세요' ,required ,class='form-control form-bottom')
+			
+			
+			div(class='checkbox')
+				label 
+					input(type='checkbox' , value='remember-me')
+					| 패스워드를 표시합니다
+			div(class='confirms')
+				button(type='submit' , class='btn btn-lg btn-success') 생성하기
+				a(href='/' , class='btn btn-lg btn-warning') 취소
+			hr
+			div(class='sign-desc')
+				p 이미 계정을 갖고있으신가요?
+				a(href='/users/signin' ) 로그인하기

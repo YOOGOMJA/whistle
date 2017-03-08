@@ -1,0 +1,205 @@
+extends ./layout.jade
+
+block profile-head
+	script(type='text/javascript' , src='/javascripts/users/profile/team.js')
+	link(rel="stylesheet", href='/stylesheets/users/team.css')
+block profile-content
+	div(ng-controller="teamController" , class='team-container')
+		div(class='team-setup-container' , ng-if='!val.UI.hasTeam')
+			div(class='team-cover')
+			div(class='team-alert' , ng-show='val.UI.mode == "NO-TEAM"')
+				div(class='container')
+					div(class='team-alert-header')
+						h1 
+							b 소속된 팀이 없습니다
+					div(class='team-alert-content')
+						div(class='alertform')
+							p 아직 팀을 생성하지 않으셨나요?
+							button(class='btn btn-success' , ng-click='fn.UI.changeMode("CREATE")') 팀 생성하기
+						div(class='alertform')
+							p 이미 팀에 속해계신가요?
+							button(class='btn btn-info' , ng-click='fn.UI.changeMode("SEARCH")') 팀 찾기
+							
+			div(class='team-alert'  , ng-show='val.UI.mode == "SEARCH"')
+				div(class='container')
+					div(class='team-alert-header')
+						h1 
+							b 팀명 혹은 팀ID를 입력해주세요
+					div(class='team-alert-content')
+						div(class='alertform')
+							input(type='text' , ng-model='val.UI.team_nm_search' , class='form-control' , placeholder='팀명 혹은 팀ID')
+							button(class='btn btn-lg btn-success' , style='margin-left : 10px;') 찾기
+							button(class='btn btn-lg btn-default' , ng-click='fn.UI.changeMode("NO-TEAM")') 취소
+			div(class='team-alert'  , ng-show='val.UI.mode == "CREATE"')
+				div(class='container')
+					div(class='team-alert-header')
+						h1 
+							b 생성할 팀명을 입력해주세요
+					div(class='team-alert-content')
+						div(class='alertform')
+							input(type='text' , ng-model='val.UI.team_nm_create' , class='form-control' , placeholder='팀명')
+							button(class='btn btn-lg btn-success' , style='margin-left : 10px;') 생성
+							button(class='btn btn-lg btn-default' , ng-click='fn.UI.changeMode("NO-TEAM")') 취소
+						
+		// ## 본문 
+		div(class='userinfo')
+			label(class='form-header') 팀명
+			input(type='text' , class='form-control' , placeholder='팀이름') 
+		div(class='userinfo')
+			label(class='form-header') 	주장
+			input(type='text' , class='form-control' , placeholder='주장') 
+			button(type='button' , class='btn btn-warning' , title='팀의 주장을 설정합니다') 찾기
+			span(role='button' , class='glyphicon glyphicon-info-sign' , title='주장 설정에 대하여')
+			
+		div(class='userinfo')
+			label(class='form-header') 	창단일
+			input(type='date' , class='form-control' , placeholder='팀창단일') 
+			
+		hr
+		div(class='container team-header-container')
+			ul(class='nav nav-tabs' , role='tablist')
+				li(role='presentation' , class='active')
+					a(href='#') 전체
+				li(role='presentation' , class='')
+					a(href='#') 가드
+				li(role='presentation' , class='')
+					a(href='#') 포워드
+				li(role='presentation' , class='')
+					a(href='#') 센터
+			div(class='container team-subs-container')
+				table(class='table table-striped team-subs')
+					thead
+						tr
+							th # 
+							th 포지션
+							th 이름 
+							th 키(cm)
+							th 몸무게(kg)
+					tbody
+						tr
+							td(colspan='6' , class='subs-header') 주전
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+					tbody
+						tr
+							td(colspan='6' , class='subs-header') 후보
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+						tr
+							td 25
+							td G
+							td 유경수
+							td 171
+							td 77
+
+			

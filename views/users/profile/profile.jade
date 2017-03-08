@@ -1,0 +1,93 @@
+extends ./layout.jade
+
+block profile-head
+	script(type='text/javascript' , src='/javascripts/users/profile/profile.js')
+
+block profile-content
+	div(ng-controller="profileController")
+		// ## 패스워드 변경용 레이어 
+		div(class='background-cover' , ng-show='val.UI.password.confirm')
+		div(class='user-alert' , ng-show='val.UI.password.confirm')
+			div(class='inner')
+				div(class='inner-heading') 
+					h2 
+						b 패스워드 변경하기
+				div(class='inner-content') 
+					p
+						| 기존 비밀번호와 변경할 비밀번호를 입력해주세요.
+						br 
+						| 비밀번호는 
+						b 특수문자,숫자,영문자를 포함해 10자 이상 16자 이하
+						| 이어야 합니다.
+					div(ng-hide='val.UI.password.visible')
+						input(type='password' , class='form-control form-top' ng-model='val.password.origin', placeholder='기존 패스워드')
+						input(type='password' , class='form-control form-middle' ng-model='val.password.change', placeholder='패스워드 변경' )
+						input(type='password' , class='form-control form-bottom' ng-model='val.password.change_valid', placeholder='패스워드 변경 확인 ') 
+					div(ng-hide='!val.UI.password.visible')
+						input(type='text' , class='form-control form-top' ng-model='val.password.origin', placeholder='기존 패스워드')
+						input(type='text' , class='form-control form-middle' ng-model='val.password.change', placeholder='패스워드 변경' )
+						input(type='text' , class='form-control form-bottom' ng-model='val.password.change_valid', placeholder='패스워드 변경 확인 ') 
+					div(class='checkbox')
+						label(class='alert alert-danger' , ng-show='val.UI.password.message && val.UI.password.message.length > 0')
+							| {{ val.UI.password.message }}
+						label 
+							input(type='checkbox' , ng-model='val.UI.password.visible')
+							| 패스워드를 표시합니다
+				div(class='inner-btns')
+					button(type='button' , class='btn btn-lg btn-success btn-confirm' , ng-click='fn.UI.password.update()') 확인
+					button(type='button' , class='btn btn-lg btn-default btn-cancel', ng-click='fn.UI.password.show(false)') 취소
+		
+		
+		// ## 본문 시작
+		div(class='userinfo')
+			label(class='form-header') Name
+			input(type='text' , class='form-control' , placeholder='성' , ng-model='val.user.NAME.LAST')
+			input(type='text' , class='form-control' , placeholder='이름' , ng-model='val.user.NAME.FIRST' )
+		div(class='userinfo')
+			label(class='form-header') Email
+
+			input(type='email' , class='form-control' , placeholder='이메일', ng-model='val.user.EMAIL' , disabled , title='이메일')
+		div(class='userinfo')
+			label(class='form-header') Password
+
+			button(class='btn btn-warning' , ng-click='fn.UI.password.show(true)') 패스워드 변경하기
+			span(role='button' , class='glyphicon glyphicon-info-sign' , title='패스워드 변경에 대하여')
+		div(class='userinfo')
+			label(class='form-header') SNS
+			button(class='btn btn-facebook' ,ng-class="{ 'disconnect' : val.facebook && val.facebook.TOKEN }", ng-click='fn.UI.SNS.facebook()') 
+				img(src='/images/MyIcons_SVG/svg/facebook29.svg' , class='icon-facebook' , title='Facebook 연동' )
+				span(ng-if='val.facebook && val.facebook.TOKEN') Facebook 연결끊기
+				span(ng-if='!val.facebook || !val.facebook.TOKEN') Facebook 연동하기
+			button(class='btn btn-twitter' , ng-click='fn.UI.SNS.twitter()') 
+				img(src='/images/MyIcons_SVG/svg/twitter1.svg' , class='icon-twitter' , title='Twitter 연동')
+				span(ng-if='val.twitter && val.twitter.TOKEN') Twitter 연결끊기
+				span(ng-if='!val.twitter || !val.twitter.TOKEN') Twitter 연동하기
+			span(role='button' , class='glyphicon glyphicon-info-sign' , title='SNS 연동에 대하여')
+		br 
+		hr 
+		br 
+		div(class='userinfo')
+			label(class='form-header') Position
+			select(class='form-control' , ng-model='val.user.POSITION') 
+				option(value='G') G(가드)
+				option(value='PG') PG(포인트 가드)
+				option(value='SG') SG(슈팅 가드)
+				option(value='F') F(포워드)
+				option(value='SF') SF(스몰 포워드)
+				option(value='PF') PF(파워 포워드)
+				option(value='C') C(센터)
+		div(class='userinfo')
+			label(class='form-header') Height
+			input(type='number' , class='form-control', min='100',max='250', placeholder='키 (단위 cm)' , ng-model='val.user.HEIGHT') 
+			label cm
+		div(class='userinfo')
+			label(class='form-header') Weight
+			input(type='number' , class='form-control' ,min="40" , max="200", placeholder='몸무게 (단위 kg)' , ng-model='val.user.WEIGHT') 
+			label kg
+		br
+		hr
+		br
+		div(class='userinfo-confirm' , id='confirm_after' )
+			button(type='button' , class='btn btn-lg btn-success' , ng-click='fn.UI.update()') 수정하기
+
+		

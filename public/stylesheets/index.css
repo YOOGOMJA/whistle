@@ -1,0 +1,71 @@
+.site-wrapper{
+	background-image : url('/images/index/index_Original.jpg');
+	background-size:cover;
+	background-position:center;
+}
+
+.cover-container .inner .lead .join{
+	display:inline;
+	font-size:18pt;
+	width:450px;
+	height:100%;
+	margin-right : 15px;
+	text-align: center;
+}
+
+.cover-container .inner .lead .btn{
+	margin-top : -5px;
+}
+
+.masthead-buttons {
+	float : right;	
+	margin-top : 15px;
+}
+
+.btn-clear-default {
+	color : #fff;
+	background-color : none;
+	border : 1px #fff solid;
+	border-radius : 5px;
+}
+
+.btn-clear-success {
+	color : #37cd37;
+	background-color : none;
+	border : 1px #37cd37 solid;
+	border-radius : 5px;
+}
+
+.site-wrapper-cover{
+	width : 100%;
+	height : 100%;
+	background-color : #2d2d2d;
+	opacity : 0.6;
+	position : fixed;
+}
+
+.cover-container .inner .lead .signin {
+	font-size:18pt;
+	width:400px;
+	height:100%;
+	margin : auto;
+	text-align: center;
+}
+.cover-container .inner .lead .form-top{
+	border-bottom-left-radius : 0;
+	border-bottom-right-radius : 0;
+}
+
+.cover-container .inner .lead .form-middle{
+	border-radius : 0;
+}
+
+.cover-container .inner .lead .form-bottom{
+	border-top-left-radius : 0;
+	border-top-right-radius : 0;
+}
+
+.cover-container .inner .lead .form-button {
+	width : 400px;
+	margin-top : 20px;
+}

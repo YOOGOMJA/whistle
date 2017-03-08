@@ -1,0 +1,27 @@
+extends ../../layout.jade
+
+block head
+	link(rel="stylesheet", href='/stylesheets/users/profile.css')
+	script(type='text/javascript' , src='/javascripts/users/profile/layout.js')
+	block profile-head
+block content
+	div(ng-controller='profileLayoutController')
+		div(class='jumbotron')
+			div(class='container-cover')
+			div(class='container')
+				div(class="jumbo-userinfo")
+					img(class='user-image' , src='/images/Logo_Color_Conceptual_W.png' , title="USER_COVER")
+					div(class='user-infotext')
+						h2(ng-bind='val.user | inf_fullname' )
+						p(ng-if='val.user.TEAM' , ng-bind='val.user.TEAM.NAME') TEAMNAME
+						p(ng-bind='val.user | inf_pos_num') G , 25
+		
+		div(class='container content')
+			div(class='page-header')
+				ul(class='nav masthead-nav')
+					li 
+						a(ng-class='{ "selected" : val.UI.menu === "PROFILE" }' , href="./profile") Profile
+					li 
+						a(ng-class='{ "selected" : val.UI.menu === "TEAM" }' href="./team") Team
+			block profile-content
+		

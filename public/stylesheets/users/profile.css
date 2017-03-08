@@ -1,0 +1,262 @@
+/* 컨텐트 */
+
+/* jumbotron */
+
+.jumbotron {
+	height : 300px;
+	padding-left : 100px;
+	padding-right : 100px;
+	padding-top : 70px;	
+	margin : 0;
+	background-image : url("/images/profile/profile_cover.jpg");
+	background-position	: center;
+	background-size: cover;
+	position : relative;
+}
+
+.container .jumbotron {
+	border-radius : 0;
+} 
+
+.jumbotron .container-cover{
+	width : 100%;
+	height : 100%;
+	background-color : #2d2d2d;
+	opacity: 0.5;
+	position:absolute;
+	margin-top:-70px;
+	margin-left:-60px;
+}
+
+.jumbotron .container .jumbo-userinfo{
+	position:relative;
+	color : white;
+}
+
+.jumbotron .container .jumbo-userinfo .user-image{
+	width : 150px;
+	height : 150px;
+	display:inline;
+}
+
+.jumbotron .container .jumbo-userinfo .user-infotext{
+	margin-left : 30px;
+	display:inline;
+	position:absolute;
+}
+
+.jumbotron .container .jumbo-userinfo .user-infotext p{
+	margin : 0;
+}
+
+/* jumbotron 하단의 컨텐츠 */
+
+.content {
+	padding-left : 30px;
+	padding-right : 30px;
+}
+
+.content .page-header{
+	margin-top : 10px;
+}
+
+/* 네비게이션 링크 */
+
+.masthead-nav > li {
+	display: inline-block;
+}
+
+.masthead-nav > li + li {
+	margin-left : 20px;
+}
+
+.masthead-nav > li > a{
+	padding-right : 0;
+	padding-left : 0;
+	font-size : 25px;
+	font-weight : bold;
+	color : #000;
+	border-bottom : 2px solid transparent;
+}
+
+.masthead-nav > li > a:hover{
+	color : #eb867a;
+	border-bottom-color : #eb867a;
+	background-color : white;
+	background-color : transparent;
+}
+
+.masthead-nav > li > a:focus{
+	color : #ef4a36;
+	border-bottom-color : #ef4a36;
+	background-color : white;
+	background-color : transparent;
+}
+
+.masthead-nav > li > .selected{
+	color : #ef4a36;
+	border-bottom-color : #ef4a36;
+	background-color : white;
+	background-color : transparent;
+}
+
+/* 메인 컨텐츠 */
+
+.content .userinfo {
+	margin-bottom : 20px;
+}
+
+.content .userinfo .form-header{
+	width : 150px;
+	font-size : 18px;
+}
+
+.content .userinfo .form-control {
+	width : 200px;
+	display:inline-block;
+}
+
+.content .userinfo > input,button  {
+	margin-right : 10px;
+}
+
+.content .userinfo-confirm {
+	margin-bottom : 50px;
+	text-align : center;
+}
+
+.btn-facebook {
+	background-color : #428bca;
+	color : #fff;
+}
+
+.btn-facebook:hover {
+	color : #fff;
+	background-color : #3A77AB;
+}
+
+.btn-twitter { 
+	background-color : #87CEEB;
+	color : #fff;
+}
+
+.btn-twitter:hover{
+	background-color : #74B1CA;
+	color : #fff;
+}
+
+.icon-facebook,.icon-twitter{
+	width : 18px;
+	margin-right : 5px;
+	vertical-align: middle;
+}
+
+.content .userinfo .disconnect{
+	background-color : #EF4A36;
+}
+
+.glyphicon {
+	font-size : 20px;
+	vertical-align : middle;
+}
+
+.glyphicon:hover,:focus {
+	color : #36566d;
+}
+
+.glyphicon > p{
+	font-size : 13px;
+	display:inline-block;
+}
+
+/*유저 안내 레이어*/
+
+.background-cover {
+	background-color : #2d2d2d;
+	position:fixed;
+	width : 100%;
+	height : 100%;
+	top :0;
+	left : 0;
+	z-index : 20;
+	opacity: 0.6;  /* Opacity for Modern Browsers */
+    filter: alpha(opacity=60);  /* Opacity for IE8 and lower */
+}
+.user-alert {
+	width : 380px;
+	height : inherit;
+	z-index: 21;
+	position:fixed;
+	background-color : white;
+	border-radius : 10px;
+	
+	left : 50%;
+	top : 50%;
+	margin-left : -190px;
+	margin-top : -200px;
+	padding : 20px;
+}
+
+.user-alert .inner{
+	border : 1px #fff solid;
+	height : 100%;
+	position:relative;
+}
+
+.user-alert .inner .inner-heading{
+	width : 100%;
+	text-align : center;
+	margin-bottom : 30px;
+}
+
+.user-alert .inner .inner-content{
+	width : 100%;
+}
+
+.user-alert .inner .inner-content input[type=text]{
+	background-color : #FFFDEB
+}
+
+.user-alert .inner .inner-btn,.inner-btns{
+	width : 100%;
+	text-align : center;
+}
+.user-alert .inner .inner-btn .btn-confirm{
+	width : 100%;
+}
+.user-alert .inner .inner-btns .btn-confirm{
+	width : 48%;
+	display:inline-block;
+}
+.user-alert .inner .inner-btns .btn-cancel{
+	width : 48%;
+	display:inline-block;
+	margin : 0;
+}
+
+.form-top {
+	border-bottom-left-radius : 0;
+	border-bottom-right-radius: 0;
+	border-bottom : 0px;
+}
+
+.form-middle {
+	border-radius : 0;
+}
+
+.form-bottom {
+	border-top : 0;
+	border-top-left-radius : 0;
+	border-top-right-radius : 0;
+}
+
+.inner-content .alert{
+	padding : 10px;
+	margin-bottom : 10px;
+	width : 100%;
+	cursor:default;
+}
+
+.container .content {
+	padding-bottom : 30px;
+}

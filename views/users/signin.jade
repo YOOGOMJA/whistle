@@ -1,0 +1,38 @@
+extends ../layout_empty.jade
+
+block head
+	link(rel='stylesheet' , href='/stylesheets/users/sign.css')
+
+block content
+	div(class='container')
+		form(class='form-signin' , action='/users/signin' , method="post")
+			h2(class='form-signin-heading') 
+				img(class='icon-logo' , src='/images/logo_Color.svg')
+				p(class='logo-desc') Whistle
+			a(href="#facebook" , class='btn btn-lg btn-facebook') 
+				img(class='icon-facebook', src='/images/MyIcons_SVG/svg/facebook29.svg')
+				| Login with Facebook
+			a(href="#login" , class='btn btn-lg btn-twitter') 
+				img(class='icon-twitter', src='/images/MyIcons_SVG/svg/twitter1.svg')
+				| Login with Twitter
+			hr
+			
+			if(message.length > 0)
+				div(class='alert alert-danger')
+					=message
+			
+			label(for='inputEmail' , class='sr-only') Email Address
+			input(type='email' , name='inputEmail' , placeholder='Email을 입력해주세요' ,required , autofocus ,class='form-control')
+			label(for='inputPassword' , class='sr-only') Email Address
+			input(type='password' , name='inputPassword' , placeholder='Password를 입력해주세요' ,required ,class='form-control')
+			div(class='checkbox')
+				label 
+					input(type='checkbox' , value='remember-me')
+					| 이 계정을 기억합니다
+			div(class='confirms')
+				button(type='submit' , class='btn btn-lg btn-success') 로그인
+				a(href='/' , class='btn btn-lg btn-warning') 취소
+			hr
+			div(class='sign-desc')
+				p 아직 계정이 없으신가요?
+				a(href='/users/signup' ) 계정 생성하기

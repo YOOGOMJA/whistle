@@ -1,0 +1,9 @@
+body {
+	background-color : #cad6d6;
+}
+
+.body-content {
+	background-color : #fff;
+	padding	: 0px;
+	min-height : 100%;
+}

@@ -1,0 +1,81 @@
+
+.team-container {
+	width : 100%;
+	position : relative;
+}
+
+.team-header-container{
+	width : 100%;
+}
+
+.team-subs-container {
+	padding : 0;
+	width : 100%;
+	height : 400px;
+	overflow-x : hidden;
+	overflow-y : auto;
+	margin-bottom : 50px;
+	
+}
+
+.team-subs .subs-header  {
+	padding : 0;
+	padding-left : 10px;
+	font-size : 13px;
+	color : white;
+	background-color : #2d2d2d;
+}
+
+/* TEAM 생성 및 검색 관련 */
+
+.team-cover {
+	background-color : #2d2d2d;
+	opacity: 0.6;
+	width : 100%;
+	height : 100%;
+	position: absolute;
+	z-index : 100;
+}
+
+.team-alert {
+	width : 100%;
+	height : 100%;
+	position : absolute;
+	z-index : 101;
+	color : white;
+} 
+
+.team-alert .container{
+	width : 600px;
+	height : 100%;
+	margin : auto;
+	padding : 270px 50px;	
+}
+
+.team-alert .team-alert-header{
+	text-align : center;
+}
+
+.team-alert .team-alert-content{
+	text-align : center;
+}
+
+.team-alert .team-alert-content p {
+	display : inline-block;
+	font-size : 20px; 
+	margin-bottom : 0;
+	vertical-align : middle;
+	margin-right : 10px;
+}
+
+.team-alert .team-alert-content .alertform{
+	margin-top : 10px;
+}
+
+.alertform input[type=text]{
+	font-size : 23px;
+	height : initial;
+	width : 60%;
+	display:inline-block;
+	vertical-align : middle;
+}

@@ -1,0 +1,114 @@
+.container {
+	background-color : #cad6d6;
+}
+
+
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.icon-logo {
+	width : 80px;
+}
+
+.logo-desc {
+	margin-top 5px;
+	font-weight : bold;
+	color : #102540;
+}
+
+.icon-facebook,.icon-twitter {
+	width : 18px;
+	height : 18px;
+	margin-right : 10px;
+}
+
+.btn-facebook {
+	margin-top : 10px;
+	background-color : #428bca;
+	color : white;
+	width : 100%;
+}
+
+.btn-twitter {
+	margin-top : 10px;
+	background-color : skyblue;
+	color : white;
+	width : 100%;
+}
+
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+	background-color : #fff;
+	border-radius : 7px;
+}
+
+.form-signin .form-signin-heading{
+	margin-top:0px;
+	text-align : center;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"]  {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin .form-middle {
+	border-radius : 0;
+	margin:0;
+}
+
+.form-signin .form-bottom {
+  	margin-bottom: 10px;
+	margin-top:0;
+  	border-top-left-radius: 0;
+  	border-top-right-radius: 0;
+	border-top : 0;
+}
+
+.form-signin .confirms {
+	text-align : center;
+}
+.form-signin .confirms button,a{
+	width : 45%;
+}
+
+.form-signin .confirms a{
+	margin-left : 10px;
+}
+
+.form-signin .sign-desc p{
+	display:inline;
+}
+.form-signin .sign-desc a{
+	margin-left : 5px;
+}
+
+.form-signin .sign-desc {
+	margin-top : 10px;
+	text-align : center;
+}
+
